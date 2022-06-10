@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('inventory_num')->unique()->primary();
             $table->string('name');
             $table->foreignId('category_id')->constrained();
-            $table->string('classroom_num');
-            $table->foreign('classroom_num')->references('num')->on('classrooms');
+            $table->string('class_room_num');
+            $table->foreign('class_room_num')->references('num')->on('class_rooms');
             $table->timestamps();
         });
     }

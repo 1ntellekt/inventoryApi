@@ -19,12 +19,20 @@ class Item extends Model
         'inventory_num',
         'name',
         'category_id',
-        'classroom_num',
+        'class_room_num',
     ];
 
     protected $hidden = [
         'created_at',
         'updated_at',
     ];
+
+    public function classroom(){
+        return $this->belongsTo(ClassRoom::class,'class_room_num','num');
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class,'category_id','id');
+    }
 
 }
