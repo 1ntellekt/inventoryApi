@@ -59,7 +59,7 @@ class CategoryController extends Controller
             'status' => true,
             'message' => 'Category found success!',
             'category' => $category,
-            'items' => $category->items,
+            //'items' => $category->items,
         ], 200);
     }
 
